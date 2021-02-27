@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if "инженер" in prof.lower() or "строитель" in prof.lower() %}
+        <h2>Инженерные тренажеры</h2>
+        {% set img = "mars-it" %}
+    {% else %}
+        <h2>Научные симуляторы</h2>
+        {% set img = "mars-ns" %}
+    {% endif %}
+    <img src="/static/img/{{ img }}.png" alt="img not found">
+{% endblock %}
